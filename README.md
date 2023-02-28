@@ -1,2 +1,2 @@
 # WebTechProject
- Web Tech Term Projecct
+ Web Tech Term Project
