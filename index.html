@@ -1,12 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <p>Hello</p>
-</body>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+    <style>
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style-type: none;
+        margin: auto;
+        padding: 14px 16px;
+        overflow: hidden;
+        background-color: #d1bea7;
+      }
+      li,
+      li a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      li a:hover {
+        color: #c69c6d;
+        font-weight: bold;
+      }
+      li#title {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      li form {
+        display: inline-block;
+        margin-right: 20px;
+      }
+      form.search-form {
+        display: inline-block;
+      }
+      form.search-form input[type="text"] {
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+      }
+      form.search-form button {
+        padding: 5px 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .title {
+        position: absolute;
+        background-color: #d1bea7;
+        color: white;
+        text-align: center;
+        margin-top: -33%;
+        margin-left: 40%;
+        font-size: 60px;
+      }
+      .sub {
+        position: absolute;
+        background-color: #d1bea7;
+        color: white;
+        text-align: center;
+        margin-top: -27%;
+        margin-left: 38%;
+        font-size: 50px;
+      }
+      .video {
+        width: 100%;
+        height: auto;
+      }
+      .description {
+        position: absolute;
+        background-color: #d1bea7;
+        color: white;
+        text-align: center;
+        margin-top: -10%;
+        margin-left: 32%;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li id="title"><a href="index.html">La Paz</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="origins.html">Origins</a></li>
+      <li><a href="coffee.html">Coffee</a></li>
+      <li>
+        <form class="search-form" action="" method="get">
+          <input type="text" name="search" placeholder="Search..." />
+          <button type="submit">
+            <img src="images/searchlogo.png" alt="" width="15" />
+          </button>
+        </form>
+      </li>
+    </ul>
+
+    <video
+      src="https://coffeehunter.com/wp-content/uploads/2022/08/headervideo.mp4"
+      class="video"
+      autoplay
+      loop
+      muted
+      plasinline
+      poster="https://coffeehunter.com/wp-content/uploads/2022/07/Mask-Group-33.jpg"
+    ></video>
+
+    <h1 class="title">COFFEE</h1>
+    <br />
+    <h2 class="sub">like no other...</h2>
+    <br />
+    <h3 class="description">Crafted artisan coffee beans from El Salvador</h3>
+    <!-- Credits to these websites:
+        https://elsalvadorinfo.net/el-salvador-coffee/
+        https://espressocoffeeguide.com/gourmet-coffee/coffees-of-the-americas/el-salvador-coffee/
+        https://coffeehunter.com/our-origins/el-salvador/#:~:text=The%20history%20of%20coffee%20in,of%20all%20El%20Salvador's%20exports.
+        https://perfectdailygrind.com/2020/11/a-guide-to-coffee-production-in-el-salvador/
+        https://www.fas.usda.gov/data/el-salvador-coffee-annual-6
+        https://tanamatales.com/el-salvador-coffee-tours-regions-varieties/
+        https://nordicapproach.no/origins/el-salvador/
+        https://perfectdailygrind.com/2016/12/video-from-planting-to-roasting-in-el-salvador/-->
+  </body>
 </html>
