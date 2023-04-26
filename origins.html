@@ -6,53 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Origins</title>
     <style>
-        a{
+         a{
             text-decoration: none;
         }
         ul{
             list-style-type: none;
             margin: auto;
-            padding: 14px 16px;
-            overflow: hidden;
-            background-color: #D1BEA7;
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #bca488;
         }
         li, li a{
             display: inline-block;
             color: white;
             text-align: center;
-            padding: 14px 16px;
+            padding: 10px;
             text-decoration: none;
         }
         li a:hover{
-            color: #C69C6D;
+            color: #71512b;
             font-weight:bold;   
         }
         li#title{
             font-size: 24px;
             font-weight: bold;
             font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        li form{
-            display: inline-block;
-            margin-right: 20px;
-        }
-        form.search-form{
-            display: inline-block;
-        }
-        form.search-form input[type="text"]{
-            padding:5px;
-            border: none;
-            border-radius: 5px;
-            font-size: 14px;
-            
-        }
-        form.search-form button{
-            padding: 5px 5px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            
-
         }
         body{
             
@@ -65,15 +45,22 @@
            font-size: 25px;
         }
         p{
-            font-size:16px;
-            line-height: 1.2rem;
+            font-size:18px;
+            line-height: 1.5rem;
         }
         img{
             display: block;
             margin-left: auto;
             margin-right: auto;
         }
-       
+        .info{
+            margin-left: 50px;
+            margin-right: 50px;
+            
+        }
+       body{
+        background-color: #D1BEA7;
+       }
 
     </style>
 </head>
@@ -84,14 +71,10 @@
         <li><a href="aboutus.html">About Us</a></li>
         <li><a href="origins.html">Origins</a></li>
         <li><a href="coffee.html">Coffee</a></li>
-        <li>
-            <form class="search-form" action="" method="get">
-                <input type="text" name="search" placeholder="Search...">
-                <button type="submit"><img src="images/searchlogo.png" alt="" width="15"/></button>
-            </form>
-        </li>
+        
     </ul>
 </br>
+<div class="info">
 <img src="images/coffee regions.jpg" alt="views" width="600"/> 
 <h3>El Salvador Coffee History</h3>  
  <p>The beginnings of coffee in El Salvador was introduced in the 18th century,
@@ -168,5 +151,6 @@
     maintained. This secures that the coffee is of good quality and the protection of their land. If these plantations were to dissapear then the forest and nearby forest 
     could be vulnerable and cause them to disapear. 
  </p>
+ </div>
 </body>
 </html>
