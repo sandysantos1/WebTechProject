@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <style>
+      a {
+        text-decoration: none;
+      }
+      ul {
+        list-style-type: none;
+        margin: auto;
+        padding: 0;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: #bca488;
+      }
+      li,
+      li a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+      }
+      li a:hover {
+        color: #71512b;
+        font-weight: bold;
+      }
+      li#title {
+        font-size: 24px;
+        font-weight: bold;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      h2 {
+        font-family: monospace;
+        font-size: 27px;
+        text-align: center;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      p {
+        font-size: 18px;
+        text-indent: 30px;
+        line-height: 1.5rem;
+      }
+      .info {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+      body {
+        background-color: #d1bea7;
+      }
+      .form {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        background-color: #e4d7c8;
+        font-size: 15px;
+        margin: auto;
+        width:50%;
+      }
+      fieldset {
+        border-color: lightgray;
+      }
+      legend {
+        font-weight: bold;
+      }
+      input {
+        margin: 0.4rem;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li id="title"><a href="index.html">La Paz</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutus.html">About Us</a></li>
+      <li><a href="origins.html">Origins</a></li>
+      <li><a href="coffee.html">Coffee</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="sitemap.html">Sitemap</a></li>
+    </ul>
+    <form>
+    <fieldset class="form">
+      <legend>Your Information:</legend>
+      <div>
+        <label for="name-input">Name:</label>
+        <input
+          type="text"
+          placeholder="Enter name here..."
+          id="name-input"
+          name="namefl"
+        />
+      </div>
+      <div>
+        <label for="email-input">Email: </label>
+        <input
+          type="text"
+          placeholder="Enter your email here"
+          id="email-input"
+          name="email"
+        />
+      </div>
+      <label for="comments">Your Feedback:</label>
+      <div>
+        <textarea
+          id="comments"
+          name="comment"
+          rows="6"
+          cols="25"
+          placeholder="Comment here..."
+        ></textarea>
+      </div>
+      <input type="submit" value="Submit" id="submitBtn"/>
+      <input type="reset" value="Reset" />
+    </fieldset>
+    </form>
+    <script>
+        function displayForm(){
+            const myForm = document.querySelector("form");
+            const fullName = myForm["namefl"].value;
+            const email = myForm["email"].value;
+            const comments = myForm["comment"].value;
+
+            if (fullName.length === 0 || email.length === 0 || comments.length === 0){
+                alert("You did not finish the form yet!");
+            }
+        }
+        document.querySelector("#submitBtn").addEventListener("click", function(){
+            displayForm();
+        });
+    </script>
+  </body>
+</html>

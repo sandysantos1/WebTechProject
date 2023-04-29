@@ -61,7 +61,13 @@
        body{
         background-color: #D1BEA7;
        }
-
+       #slide-img{
+      width: 400px;
+     }
+     .slideshow{
+      display: flex;
+      justify-content: center;
+     }
     </style>
 </head>
 <body>
@@ -71,11 +77,43 @@
         <li><a href="aboutus.html">About Us</a></li>
         <li><a href="origins.html">Origins</a></li>
         <li><a href="coffee.html">Coffee</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      <li><a href="sitemap.html">Sitemap</a></li>
         
     </ul>
 </br>
 <div class="info">
-<img src="images/coffee regions.jpg" alt="views" width="600"/> 
+    <div class="slideshow">
+    <img src="" alt="" id="slide-img"/>
+    </div>
+
+<script>
+    const imageEl = document.querySelector("#slide-img");
+    const slides = [
+    "images/coffee regions.jpg",
+      "images/slide1.jpg",
+      "images/slide2.jpg",
+      "images/slide4.jpg",
+      "images/slide5.jpg",
+    ]
+
+    let index = 0;
+
+    function changePic(){
+      if (index === slides.length){
+        index = 0;
+      }
+      const imgSrc = slides[index];
+      imageEl.src = imgSrc;
+      index++;
+      setTimeout(changePic,3000);
+
+    }
+
+    document.addEventListener("DOMContentLoaded", function(){
+      changePic();
+    });
+  </script>
 <h3>El Salvador Coffee History</h3>  
  <p>The beginnings of coffee in El Salvador was introduced in the 18th century,
     removing indigo as the countries main export and by the 19th century coffee 
@@ -94,7 +132,7 @@
     grow coffee, no person can own more than 605 acres. 
  </p>
  <h3>Coffee Production Regions</h3>
- <img src="images/regions.webp" alt="regions" width="600"/>
+ <img src="images/regions.webp" alt="regions" title="Regions" width="600"/>
  <p>
     Coffee productions grow mostly across the entire country, that is divided into 7 regions of 
     production plantations. All are different that depend on the altitude and flavor characteritics.
@@ -133,7 +171,7 @@
     common coffees to be made.  
     </p>
  <h3>Coffee Exports and Production</h3>
- <img src="images/plantationtrees.webp" alt="coffee trees" width="400"/>
+ <img src="images/plantationtrees.webp" alt="coffee trees" title="Coffee Bean Trees" width="400"/>
  <p>The coffee production has been declining ever since 1980s and today it makes for 2% of their total exports. Regardless of this, it is 
     now a specialty coffee origin and has one of the world's most desired variety. The reason why they export so much coffee is because it sells for triple the amount in the international 
     markets than the local market. Coffee prodcution was the principal economic driver in the 1920s and 30s, making it 90% of exports. This changed in 
