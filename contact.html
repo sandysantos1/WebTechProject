@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
+    <link rel="shortcut icon" href="images/favicon.ico" />
     <style>
       a {
         text-decoration: none;
@@ -65,7 +66,7 @@
         background-color: #e4d7c8;
         font-size: 15px;
         margin: auto;
-        width:50%;
+        width: 50%;
       }
       fieldset {
         border-color: lightgray;
@@ -75,6 +76,23 @@
       }
       input {
         margin: 0.4rem;
+      }
+      .footer {
+        font-size: 10px;
+        text-align: center;
+      }
+      @media screen and (max-width:750px){
+      ul{
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        li#title{
+          font-size: 20px;
+        }
+        li, li a{
+          font-size: 14px;
+          padding: 5px;
+        }
       }
     </style>
   </head>
@@ -89,54 +107,64 @@
       <li><a href="sitemap.html">Sitemap</a></li>
     </ul>
     <form>
-    <fieldset class="form">
-      <legend>Your Information:</legend>
-      <div>
-        <label for="name-input">Name:</label>
-        <input
-          type="text"
-          placeholder="Enter name here..."
-          id="name-input"
-          name="namefl"
-        />
-      </div>
-      <div>
-        <label for="email-input">Email: </label>
-        <input
-          type="text"
-          placeholder="Enter your email here"
-          id="email-input"
-          name="email"
-        />
-      </div>
-      <label for="comments">Your Feedback:</label>
-      <div>
-        <textarea
-          id="comments"
-          name="comment"
-          rows="6"
-          cols="25"
-          placeholder="Comment here..."
-        ></textarea>
-      </div>
-      <input type="submit" value="Submit" id="submitBtn"/>
-      <input type="reset" value="Reset" />
-    </fieldset>
+      <fieldset class="form">
+        <legend>Your Information:</legend>
+        <div>
+          <label for="name-input">Name:</label>
+          <input
+            type="text"
+            placeholder="Enter name here..."
+            id="name-input"
+            name="namefl"
+          />
+        </div>
+        <div>
+          <label for="email-input">Email: </label>
+          <input
+            type="text"
+            placeholder="Enter your email here"
+            id="email-input"
+            name="email"
+          />
+        </div>
+        <label for="comments">Your Feedback:</label>
+        <div>
+          <textarea
+            id="comments"
+            name="comment"
+            rows="6"
+            cols="25"
+            placeholder="Comment here..."
+          ></textarea>
+        </div>
+        <input type="submit" value="Submit" id="submitBtn" />
+        <input type="reset" value="Reset" />
+      </fieldset>
     </form>
     <script>
-        function displayForm(){
-            const myForm = document.querySelector("form");
-            const fullName = myForm["namefl"].value;
-            const email = myForm["email"].value;
-            const comments = myForm["comment"].value;
+      function displayForm() {
+        const myForm = document.querySelector("form");
+        const fullName = myForm["namefl"].value;
+        const email = myForm["email"].value;
+        const comments = myForm["comment"].value;
 
-            if (fullName.length === 0 || email.length === 0 || comments.length === 0){
-                alert("You did not finish the form yet!");
-            }
+        if (
+          fullName.length === 0 ||
+          email.length === 0 ||
+          comments.length === 0
+        ) {
+          alert("You did not finish the form yet!");
         }
-        document.querySelector("#submitBtn").addEventListener("click", function(){
-            displayForm();
+      }
+      document
+        .querySelector("#submitBtn")
+        .addEventListener("click", function () {
+          displayForm();
         });
     </script>
+    <div class="footer">
+      <hr />
+      <footer>&#169;2023 Sandy.S</footer>
+    </div>
   </body>
 </html>
